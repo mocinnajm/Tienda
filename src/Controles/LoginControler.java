@@ -44,11 +44,19 @@ public class LoginControler implements ActionListener{
                     admin.setVisible(true);
                     this.views.dispose();
                     
+                }else{
+                    
+                JOptionPane.showMessageDialog(null, "usuario o la contraseña incorrecta");
                 }
             }
         
         }else{
-        
+            
+               int pregunta =JOptionPane.showConfirmDialog(null,"Esta seguro que desea salir","Pregunta",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
+               if (pregunta== 0) {
+                   System.exit(0);
+                
+            }
         }
        
     }
